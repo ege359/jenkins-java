@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('docker') {
       steps {
         sh 'docker build -f ./Dockerfile .'
       }
