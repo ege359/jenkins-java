@@ -15,7 +15,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -f Dockerfile . -t jenkins-project:latest'
+        sh 'docker build -f Dockerfile . -t ege359/jenkins-project:latest'
       }
     }
 
