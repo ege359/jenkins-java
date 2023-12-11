@@ -15,7 +15,7 @@ pipeline {
 
     stage('docker') {
       steps {
-        sh 'docker build -f ./Dockerfile .'
+        sh 'docker build -f /var/lib/docker/overlay2/kvmhci1jo8w0rweerr4oostts/diff/Dockerfile .'
       }
     }
 
