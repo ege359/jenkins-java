@@ -39,7 +39,18 @@ pipeline {
         sh 'docker push ege359/jenkins-project:latest'
       }
     }
+    
+    stage('Deploy to Server') {
+            steps {
+                script {
+                    // Deploy the container to the target server
+                    sshagent(['ssh']) {
+                        sh 'ssh egedocker@192.168.109.131 "docker pull ege359/jenkins-project:latest && docker run -d --name ege359/jenkins-project:latest -p 8080:80 ege359/jenkins-project:latest"'
+                    }
+                }
+            }
 
+    }
   }
   environment {
     DOCKERHUB_USER = 'ege359'
