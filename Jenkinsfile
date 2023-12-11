@@ -25,6 +25,12 @@ pipeline {
       }
     }
 
+    stage('Push ') {
+      steps {
+        sh 'docker push jenkins-project:latest'
+      }
+    }
+
   }
   environment {
     DOCKERHUB_USER = 'ege359'
