@@ -16,7 +16,7 @@ pipeline {
     stage('Compile Java Code') {
       steps {
         script {
-          sh 'javac basic-java'
+          sh 'javac basic-java.java'
         }
 
       }
