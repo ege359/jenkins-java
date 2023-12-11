@@ -12,6 +12,14 @@ pipeline {
         sh 'ls -la'
       }
     }
+    
+    stage('Compile Java Code') {
+    steps {
+        script {
+            // Compile Java code
+            sh 'javac YourJavaFile.java'
+        }
+    }
 
     stage('Build') {
       steps {
