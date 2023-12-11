@@ -15,7 +15,7 @@ pipeline {
 
     stage('Build / Shell Script') {
       steps {
-        sh 'docker build -f jenkins-java/Dockerfile .'
+        sh 'docker build -f ./Dockerfile .'
       }
     }
 
