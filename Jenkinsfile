@@ -20,6 +20,7 @@ pipeline {
             sh 'javac YourJavaFile.java'
         }
     }
+    }
 
     stage('Build') {
       steps {
