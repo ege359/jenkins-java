@@ -13,11 +13,21 @@ pipeline {
       }
     }
 
-    stage('docker') {
+    stage('Build') {
       steps {
         sh 'docker build -f Dockerfile .'
       }
     }
 
+    stage('DcockerHub') {
+      steps {
+        sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
+      }
+    }
+
+  }
+  environment {
+    DOCKERHUB_USER = 'ege'
+    DOCKERHUB_PASSWORD = '123'
   }
 }
