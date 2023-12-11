@@ -27,7 +27,7 @@ pipeline {
 
     stage('Push ') {
       steps {
-        sh 'docker push jenkins-project:latest'
+        sh 'docker push ege359/jenkins-project:latest'
       }
     }
 
